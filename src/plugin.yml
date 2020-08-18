@@ -1,0 +1,5 @@
+name: RoatatingMOTD
+version: 1.0
+author: Glarity
+main: dev.tylerolson.rotatingmotd.Main
+api-version: 1.16
