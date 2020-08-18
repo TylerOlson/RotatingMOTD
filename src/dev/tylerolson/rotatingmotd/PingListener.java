@@ -1,11 +1,13 @@
 package dev.tylerolson.rotatingmotd;
 
+import org.bukkit.Color;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.server.ServerListPingEvent;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class PingListener implements Listener {
@@ -18,6 +20,9 @@ public class PingListener implements Listener {
         int motdSize = config.getStringList("motds").size();
         int randomMOTD = new Random().nextInt(motdSize);
         event.setMotd(config.getStringList("motds").get(randomMOTD));
+
+        //List<String> motdList = Main.instance.getConfig().getStringList("motds");
+        //event.setMotd(String.join(" ", motdList));
 
         //playercount
         String maxPlayers = config.getString("maxPlayers");

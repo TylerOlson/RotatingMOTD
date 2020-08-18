@@ -1,5 +1,9 @@
-name: RoatatingMOTD
+name: RotatingMOTD
 version: 1.0
 author: Glarity
 main: dev.tylerolson.rotatingmotd.Main
 api-version: 1.16
+commands:
+  rotatingmotd:
+    description: Adds a rotating MOTD
+    usage: /<command> [add] [remove] [list] [reload]
