@@ -18,8 +18,13 @@ public class PingListener implements Listener {
 
         //motd
         int motdSize = config.getStringList("motds").size();
-        int randomMOTD = new Random().nextInt(motdSize);
-        event.setMotd(config.getStringList("motds").get(randomMOTD));
+
+        if (motdSize == 0) {
+            event.setMotd("No config configured.");
+        } else {
+            int randomMOTD = new Random().nextInt(motdSize);
+            event.setMotd(config.getStringList("motds").get(randomMOTD));
+        }
 
         //List<String> motdList = Main.instance.getConfig().getStringList("motds");
         //event.setMotd(String.join(" ", motdList));
