@@ -5,5 +5,8 @@ main: dev.tylerolson.rotatingmotd.Main
 api-version: 1.16
 commands:
   rotatingmotd:
-    description: Adds a rotating MOTD
+    description: Adds a rotating MOTD.
     usage: /<command> [add] [remove] [list] [reload]
+  maxplayers:
+    description: Set the maximum player count displayed when pinging the server.
+    usage: /<command> [set] [get]

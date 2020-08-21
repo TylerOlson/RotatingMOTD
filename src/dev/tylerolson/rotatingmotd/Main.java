@@ -12,6 +12,7 @@ public class Main extends JavaPlugin {
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new PingListener(), this);
         getCommand("rotatingmotd").setExecutor(new RotatingCommand());
+        getCommand("maxplayers").setExecutor(new MaxPlayerCommand());
 
         for (int i = 0; i < getConfig().getStringList("motds").size(); i++) {
             Main.instance.getLogger().info("Found MOTD: " + Main.instance.getConfig().getStringList("motds").get(i));
